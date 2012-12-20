@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @shipping_line.user_id %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @shipping_line.address %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @shipping_line.email %>
+</p>
+
+<p>
+  <b>Contact person:</b>
+  <%= @shipping_line.contact_person %>
+</p>
+
+<p>
+  <b>Contact number:</b>
+  <%= @shipping_line.contact_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_shipping_line_path(@shipping_line) %> |
+<%= link_to 'Back', shipping_lines_path %>

@@ -1,0 +1,31 @@
+<h1>Listing shipping_lines</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Contact person</th>
+    <th>Contact number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shipping_lines.each do |shipping_line| %>
+  <tr>
+    <td><%= shipping_line.user_id %></td>
+    <td><%= shipping_line.address %></td>
+    <td><%= shipping_line.email %></td>
+    <td><%= shipping_line.contact_person %></td>
+    <td><%= shipping_line.contact_number %></td>
+    <td><%= link_to 'Show', shipping_line %></td>
+    <td><%= link_to 'Edit', edit_shipping_line_path(shipping_line) %></td>
+    <td><%= link_to 'Destroy', shipping_line, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shipping line', new_shipping_line_path %>

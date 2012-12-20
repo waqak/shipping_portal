@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Shipping line:</b>
+  <%= @ship.shipping_line_id %>
+</p>
+
+<p>
+  <b>Load capacity:</b>
+  <%= @ship.load_capacity %>
+</p>
+
+<p>
+  <b>Volume capacity:</b>
+  <%= @ship.volume_capacity %>
+</p>
+
+<p>
+  <b>Ship make:</b>
+  <%= @ship.ship_make %>
+</p>
+
+<p>
+  <b>Ship model:</b>
+  <%= @ship.ship_model %>
+</p>
+
+<p>
+  <b>Ship model year:</b>
+  <%= @ship.ship_model_year %>
+</p>
+
+
+<%= link_to 'Edit', edit_ship_path(@ship) %> |
+<%= link_to 'Back', ships_path %>

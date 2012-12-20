@@ -1,0 +1,41 @@
+<%= form_for(@ship) do |f| %>
+  <% if @ship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ship.errors.count, "error") %> prohibited this ship from being saved:</h2>
+
+      <ul>
+      <% @ship.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :shipping_line_id %><br />
+    <%= collection_select (:shipping_line, :shipping_line_id, ShippingLine.all, :id, :email) %>
+  </div>
+  <div class="field">
+    <%= f.label :load_capacity %><br />
+    <%= f.number_field :load_capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :volume_capacity %><br />
+    <%= f.number_field :volume_capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :ship_make %><br />
+    <%= f.text_field :ship_make %>
+  </div>
+  <div class="field">
+    <%= f.label :ship_model %><br />
+    <%= f.text_field :ship_model %>
+  </div>
+  <div class="field">
+    <%= f.label :ship_model_year %><br />
+    <%= f.number_field :ship_model_year %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

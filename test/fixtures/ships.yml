@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  shipping_line_id: 1
+  load_capacity: 1
+  volume_capacity: 1
+  ship_make: MyString
+  ship_model: MyString
+  ship_model_year: 1
+
+two:
+  shipping_line_id: 1
+  load_capacity: 1
+  volume_capacity: 1
+  ship_make: MyString
+  ship_model: MyString
+  ship_model_year: 1
